@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap');
+
+* {
+    font-family: 'Prompt', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 900;
+}
+
+.mobile {
+    display: none;
+}
+
+:root {
+    margin: 0;
+    padding: 0;
+    zoom: .7;
+}
+
+body {
+    background-color: #E8F8EA;
+}
+
+.btn.login-btn {
+    color: #C7F9CC;
+    font-size: 18px;
+    background-color: #005D34;
+    border: none;
+    padding: .3em 1.1em;
+}
+
+.btn.btn-primary.login-btn:hover {
+    background-color: #034025;
+}
+
+.body {
+    background-color: #E8F8EA;
+}
+
+.navbar-nav>li {
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: x-large;
+}
+
+.nav-color {
+    background-color: #80ed99;
+}
+
+.margin-0 {
+    margin: 0;
+}
+
+.padding-all-0 {
+    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.delete-obat {
+    font-size: 25px;
+    border-radius: 20px;
+    padding: 35px;
+    background: linear-gradient(90.86deg, #C7F9CC -12.14%, #C7F9CC 112.53%);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.306);
+}
+
+.button-delete a {
+    font-weight: 500;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+a.btn.btn-primary,
+button.btn.btn-primary {
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    color: #C7F9CC;
+    background-color: #005D34;
+    transition: all .25s;
+}
+
+a.btn.btn-primary:hover,
+button.btn.btn-primary:hover {
+    background-color: #004125;
+    color: #C7F9CC;
+}
+
+a.btn.btn-primary.delete {
+    background-color: #C7F9CC;
+    color: #005D34;
+}
+
+a.btn.btn-primary.delete:hover {
+    background-color: #a6daac;
+    color: #007542;
+}
+
+div.foot-back {
+    background-color: #C7F9CC;
+}
+
+div.foot-back a {
+    text-decoration: none;
+    color: black;
+}
+
+div.foot-back strong {
+    font-weight: 500;
+}
+
+div.foot-back a h3 {
+    font-weight: 300;
+}
+
+.footer-contact {
+    background-color: #57CC99;
+    color: #005D34;
+}
+
+@media only screen and (max-width: 1227px) {
+    .mobile {
+        margin: 0px 3em;
+        text-align: center;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile~*,
+    .navbar.navbar-expand-lg {
+        display: none;
+    }
+}

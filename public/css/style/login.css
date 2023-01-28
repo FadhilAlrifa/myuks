@@ -1,0 +1,98 @@
+.mobile {
+    display: none;
+}
+
+body {
+    background-color: #E8F8EA;
+}
+
+img.login-image {
+    width: 100%;
+}
+
+.login-section {
+    margin-left: 90px;
+    margin-top: 90px;
+}
+
+.form-input-title {
+    font-size: 24px;
+}
+
+.input-group {
+    width: 50%;
+}
+
+input.form-control {
+    background-color: #7CCF8F;
+    color: white;
+    border: none;
+    width: 5px;
+}
+
+input.form-control:focus {
+    background-color: #7CCF8F;
+    box-shadow: none;
+}
+
+input.form-control:focus {
+    background-color: #7CCF8F;
+    border: none;
+    color: white;
+}
+
+span.input-group-text {
+    background-color: #005D34;
+    border: none;
+    padding: 0px;
+    width: 10px;
+}
+
+button[type="submit"].btn-primary {
+    background-color: transparent;
+    font-weight: 700;
+    color: black;
+    border: black;
+    box-shadow: 0px 0px 0px 1px black;
+    transition: all .25s;
+}
+
+button[type="submit"].btn-primary:hover {
+    background-color: #034025;
+    color: white;
+}
+
+.vector {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 280px;
+    margin: 0px;
+    padding: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+    .login-section {
+        margin: 80px 10%;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1227px) {
+    .mobile {
+        margin: 0px 3em;
+        text-align: center;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile~*,
+    .navbar.navbar-expand-lg {
+        display: none;
+    }
+}
