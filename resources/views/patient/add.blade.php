@@ -31,7 +31,7 @@
                     </h3>
                     <input type="text" class="form-control @error('name') is-invalid @enderror"
                         value="{{ old('name') }}" name="name" id="name" aria-describedby="emailHelp"
-                        placeholder="Masukkan Judul Artikel" required>
+                        placeholder="Masukkan Nama Pasien" required>
                     @error('name')
                         <div class="invalid-feedback fs-5">
                             {{ $message }}
@@ -44,7 +44,7 @@
                     </h3>
                     <input type="text" class="form-control @error('class') is-invalid @enderror"
                         value="{{ old('class') }}" name="class" id="class" aria-describedby="emailHelp"
-                        placeholder="Masukkan Judul Artikel" required>
+                        placeholder="Masukkan Kelas Pasien" required>
                     @error('class')
                         <div class="invalid-feedback fs-5">
                             {{ $message }}
@@ -71,7 +71,7 @@
                     </h3>
                     <input type="text" class="form-control @error('keluhan') is-invalid @enderror"
                         value="{{ old('keluhan') }}" name="keluhan" id="keluhan" aria-describedby="emailHelp"
-                        placeholder="Masukkan Judul Artikel" required>
+                        placeholder="Masukkan Keluhan" required>
                     @error('keluhan')
                         <div class="invalid-feedback fs-5">
                             {{ $message }}

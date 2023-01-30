@@ -55,7 +55,8 @@
         <div class="row patient-list-container justify-content-center">
             <div class="col-lg-8 patient-list row justify-content-center pt-0 pb-5">
                 @foreach ($students as $student)
-                    @if (date('o-m-d', strtotime($student->timestamp)) == now()->format('Y-m-d') && $student->status == 0)
+                    {{-- @if (date('Y-m-d', strtotime($student->timestamp)) == now()->format('Y-m-d') && $student->status == 0) --}}
+                    @if (date('Y-m-d', strtotime($student->timestamp)) == now()->format('Y-m-d'))
                         <div class="col-lg-10 p-0 patient-item my-5">
                             <a href="/patients/{{ $student->slug }}/edit">
                                 <div class="card border-0 ">
@@ -64,7 +65,7 @@
                                             <img src="{{ asset('img/' . $student->image) }}" class="img-fluid rounded"
                                                 alt="foto siswa">
                                         </div>
-                                        <div class="col-lg-8 patient-desc">
+                                        <div class=" {{ $student->status == 0 ? 'col-lg-8' : 'col-lg-6' }} patient-desc">
                                             <div class="card-body">
                                                 <h5 class="card-title fs-4 text-dark">{{ $student->name }}</h5>
                                                 <p class="card-text fs-5">{{ $student->class }}</p>
@@ -74,15 +75,21 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-2 text-center">
+                                            <p>*Masuk</p>
                                             <h4>{{ date('H:i', strtotime($student->timestamp)) }}</h4>
                                         </div>
+                                        @if ($student->status == 1)
+                                            <div class="col-lg-2 text-center">
+                                                <p>*Keluar</p>
+                                                <h4>{{ date('H:i', strtotime($student->updated_at)) }}</h4>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </a>
-
                         </div>
                     @else
-                        <p>Data kosong</p>
+                        {{-- <p>Data kosong</p> --}}
                     @endif
                 @endforeach
                 @auth

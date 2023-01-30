@@ -117,6 +117,8 @@ class StudentController extends Controller
             $validatedData["image"] = 'patients/sample.jpg';
         }
 
+        // $validatedData["updated_at"] = strtotime(now()->format('Y-m-d H:i:s'));
+
         // return $validatedData;
         Student::where('id', $student->id)->update($validatedData);
 
