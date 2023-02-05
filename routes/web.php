@@ -76,7 +76,7 @@ Route::delete('/medicines/{medicine:slug}/delete', [MedicineController::class, '
 
 
 Route::get('/login', [LoginController::class, 'login'])->middleware('guest');
-Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/login', [LoginController::class, 'authenticate'])->middleware('guest');
 Route::get('/logout', [LoginController::class, 'logout'])->middleware('admin');
 
 Route::get('/welcome', function () {

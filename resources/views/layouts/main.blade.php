@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyUKS | {{ $url_name }}</title>
 
+    <link rel="shortcut icon" href="/img/assets/MyUKS_2.ico" type="image/x-icon">
+
     @yield('style')
 
     @yield('script')
