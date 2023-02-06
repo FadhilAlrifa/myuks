@@ -106,39 +106,6 @@
             </div>
         </div>
     @else
-        <div class="row mt-5">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10">
-                    <img src="img/assets/icon_obat.png" width="56px" alt="" class="d-inline">
-                    <h3 class="d-inline-block ms-3 title-text"><b>Obat Yang Paling Dicari</b></h3>
-                </div>
-            </div>
-            <div class="row justify-content-center daftar-obat">
-                @if ($medicines->count())
-                    @foreach ($medicines->sortByDesc('view')->slice(0, 8) as $medicine)
-                        <div class="col-lg-3 mb-5">
-                            <a href="/medicines/{{ $medicine->slug }}">
-                                <div class="card border-obat">
-                                    <div class="text-center">
-                                        <img src="{{ asset('img/' . $medicine->image) }}" class="card-img-top rounded"
-                                            alt="...">
-                                    </div>
-                                    <div class="card-body text-center">
-                                        <h4 class="card-title text-dark">{{ $medicine->name }}</h4>
-                                        <p class="card-text mt-4">Stok : {{ $medicine->stock }}</p>
-                                        <p>Kategori : {{ $medicine->category->name }}</p>
-                                        <p class="text-muted">View : {{ $medicine->view }}</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @else
-                    <p class="text-center fs-3 card border-0 w-25 py-3 m-auto text-muted disabled">Obat masih kosong</p>
-                @endif
-            </div>
-        </div>
-
         @foreach ($medicines_category as $medicine_category)
             @if ($medicines->where('category_id', $medicine_category->id)->count())
                 <div class="row mt-5">
