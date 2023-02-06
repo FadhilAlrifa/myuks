@@ -3,6 +3,8 @@
 @section('style')
     <link rel="stylesheet" href="/css/style/hospital/add_hospital.css">
     <link rel="stylesheet" href="/css/style/trix.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 @endsection
 
 @section('script')
@@ -69,7 +71,7 @@
                     </h3>
                     <input type="number" max="5" min="1" name="rating" value="{{ old('rating') }}"
                         id="rating" class="form-control @error('rating') is-invalid @enderror"
-                        aria-describedby="emailHelp" placeholder="Masukkan rating rumah sakit (1 - 5)" required>
+                        aria-describedby="emailHelp" placeholder="Masukkan rating rumah sakit (1 - 5)">
                     @error('rating')
                         <div class="invalid-feedback fs-5">
                             {{ $message }}
@@ -123,6 +125,23 @@
         document.addEventListener('trix-file-accept', function(e) {
             e.preventDefault();
         })
+
+        $(document).ready(function() {
+            $("#rating").keyup(function() {
+                let input = $("#rating").val();
+                $.ajax({
+                    method: "POST",
+                    url: "ajax.php",
+                    data: {
+                        inputs: input
+                    },
+                    success: function(res) {
+                        $("#rating").val(res);
+                    }
+                });
+
+            });
+        });
 
         function previewImage() {
             const image = document.querySelector('#image');

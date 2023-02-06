@@ -44,7 +44,7 @@
     </div>
     <div class="row justify-content-center medicine-btn">
         <div class="col-lg-10 d-flex justify-content-between">
-            <a class="btn btn-primary btn-back" href="{{ url()->previous() }}" role="button">
+            <a class="btn btn-primary btn-back" href="/medicines" role="button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                     class="bi bi-arrow-left" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
