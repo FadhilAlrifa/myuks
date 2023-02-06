@@ -154,6 +154,11 @@ a.btn.btn.btn-primary.btn-back:hover {
     box-shadow: 4px 3px 7px rgba(0, 0, 0, 0.25);
 }
 
+.input-form form input:autofill {
+    background: linear-gradient(90.86deg, #C7F9CC -12.14%, #C7F9CC 112.53%);
+}
+
+
 .input-form input[type="file"]::before {
     content: "Pilih File";
     font-weight: 600;

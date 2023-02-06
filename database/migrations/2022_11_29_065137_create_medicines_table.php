@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug')->unique();
-            $table->bigInteger('view')->unsigned();
+            // $table->bigInteger('view')->unsigned();
             $table->foreignId('category_id');
             $table->bigInteger('stock')->unsigned();
             $table->text('dose');

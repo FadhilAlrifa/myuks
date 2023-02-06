@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug')->unique();
-            $table->bigInteger('view')->unsigned();
+            // $table->bigInteger('view')->unsigned();
             $table->foreignId('category_id');
             $table->text('highlight');
             $table->text('body');

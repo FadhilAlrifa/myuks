@@ -12,6 +12,8 @@
 </head>
 
 <body>
+    <div class="container-fluid mobile"></div>
+    
     <div class="container-fluid">
         <div class="row">
             <div class="col-4 d-none d-xl-block p-0">

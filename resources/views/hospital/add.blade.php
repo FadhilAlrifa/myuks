@@ -32,8 +32,7 @@
                         <label for="name" class="form-label">Nama Rumah Sakit</label>
                     </h3>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" name="name"
-                        value="{{ old('name') }}" id="name" aria-describedby="emailHelp"
-                        placeholder="Masukkan nama rumah sakit" required>
+                        value="{{ old('name') }}" id="name" placeholder="Masukkan nama rumah sakit">
                     @error('name')
                         <div class="invalid-feedback fs-5">
                             {{ $message }}
