@@ -8,6 +8,10 @@
     font-family: 'Prompt', sans-serif;
 }
 
+.spacer-mobile {
+    display: none;
+}
+
 .row a {
     text-decoration: none;
     color: black;
@@ -17,6 +21,7 @@
     margin: 0;
     padding: 0;
     zoom: .7;
+    overflow-x: hidden;
 }
 
 .mobile {
@@ -66,6 +71,10 @@ nav.navbar {
     background-color: #034025;
 }
 
+div.patient.mobile {
+    display: none;
+}
+
 div.patient {
     margin-top: 90px;
 }
@@ -79,7 +88,7 @@ div.patient-list {
 }
 
 div.patient-item {
-    background-color: #ADE4B3;
+    /* background-color: #ADE4B3; */
     border-radius: 13px;
     box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
     color: inherit;
@@ -110,7 +119,7 @@ div.patient-item .patient-desc {
 }
 
 div.healthy-news {
-    margin-top: 90px;
+    margin-top: 1000px;
 }
 
 .artikels {
@@ -133,6 +142,16 @@ div.healthy-news {
     max-width: 100%;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+div.list-artikel-category-mobile,
+div.list-artikel-mobile {
+    display: none;
+}
+
+div.list-medicine-category-mobile,
+div.list-medicine-mobile {
+    display: none;
 }
 
 .maps-telkom {
@@ -234,6 +253,10 @@ a {
     position: relative;
 }
 
+div.map-parent iframe {
+    height: 700px;
+}
+
 .map-parent a:hover {
     color: black;
     transition: all .25s;
@@ -315,18 +338,170 @@ a.border-card-active,
     background-color: #a6d6b1;
 }
 
-@media only screen and (max-width: 1227px) {
-    .mobile {
+@media only screen and (max-width: 992px) {
+    .spacer-desktop {
+        display: none;
+    }
+
+    .spacer-mobile {
+        display: block;
+    }
+
+    /* .mobile {
         margin: 0px 3em;
         text-align: center;
         display: flex;
         height: 100vh;
         justify-content: center;
         align-items: center;
-    }
+    } */
 
-    .mobile~*,
+    /* .mobile~*,
     .navbar.navbar-expand-lg {
         display: none;
+    } */
+
+    :root {
+        /* zoom: .; */
+        overflow-x: hidden;
+        /* position: relative; */
+        height: 100%;
     }
+
+    div.partial-navbar {
+        display: none;
+    }
+
+    body>div.container-fluid .w85 {
+        margin: auto;
+        width: 85%;
+    }
+
+    #lokasi-rs-text {
+        /* margin-left: 20px; */
+    }
+
+
+
+
+    div.map-parent iframe {
+        height: 450px;
+    }
+
+
+
+    /* Pasien */
+    div.patient.dekstop {
+        display: none;
+    }
+
+    div.patient.mobile {
+        display: block;
+        /* margin-left: 20px; */
+    }
+
+    /* ------------------------------- */
+    ::webkit-scrollbar {
+        height: 8px;
+    }
+
+    ::webkit-scrollbar-track {
+        border-radius: 25px;
+    }
+
+    ::webkit-scrollbar-thumb {
+        border-radius: 25px;
+    }
+
+    div.patient.mobile .patient-list-container {
+        display: flex;
+        gap: 12px;
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+        scroll-padding: 30px;
+    }
+
+    div.patient.mobile .patient-list-container .patient-item {
+        flex: 0 0 80%;
+        scroll-snap-align: start;
+    }
+
+
+
+
+
+    div.list-artikel-category-desktop,
+    div.list-artikel-desktop {
+        display: none;
+    }
+
+    div.list-artikel-category-mobile {
+        display: flex;
+        gap: 12px;
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+        scroll-padding: 30px;
+    }
+
+    div.list-artikel-category-mobile-item {
+        flex: 0 0 80%;
+        scroll-snap-align: start;
+    }
+
+    div.button-artikel {
+        margin: 0px 30px;
+    }
+
+    div.list-artikel-mobile {
+        display: flex;
+        gap: 12px;
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+        scroll-padding: 30px;
+    }
+
+    div.list-artikel-mobile .artikel-mobile {
+        flex: 0 0 80%;
+        scroll-snap-align: start;
+    }
+
+
+
+
+
+    div.list-medicine-category-desktop,
+    div.list-medicine-desktop {
+        display: none;
+    }
+
+    div.list-medicine-category-mobile {
+        display: flex;
+        gap: 12px;
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+        scroll-padding: 30px;
+    }
+
+    div.list-medicine-category-item {
+        flex: 0 0 80%;
+        scroll-snap-align: start;
+    }
+
+
+
+    div.list-medicine-mobile {
+        display: flex;
+        gap: 12px;
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+        scroll-padding: 30px;
+    }
+
+    div.list-medicine-mobile-item {
+        flex: 0 0 80%;
+        scroll-snap-align: start;
+    }
+
+
+    /* Pasien End */
 }

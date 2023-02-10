@@ -52,7 +52,7 @@ class HospitalController extends Controller
             'name' => 'required|max:255',
             'location' => 'required',
             'schedule' => 'required',
-            'rating' => 'required|integer|min:1|max:1',
+            'rating' => 'required|integer|min:1|max:5',
             'link' => 'required',
             'image' => 'image|file|max:5120'
         ]);
@@ -108,7 +108,7 @@ class HospitalController extends Controller
             'name' => 'required|max:255',
             'location' => 'required',
             'schedule' => 'required',
-            'rating' => 'required|min:1|max:5',
+            'rating' => 'required|integer|min:1|max:5',
             'link' => 'required',
             'image' => 'image:jpg,jpeg,png|file|max:5120'
         ]);

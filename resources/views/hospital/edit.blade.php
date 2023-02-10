@@ -32,7 +32,7 @@
                     </h3>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" name="name"
                         value="{{ old('name', $hospital->name) }}" id="name" aria-describedby="emailHelp"
-                        placeholder="Masukkan nama rumah sakit" required>
+                        placeholder="Masukkan nama rumah sakit" required autocomplete="off">
                     @error('name')
                         <div class="invalid-feedback fs-5">
                             {{ $message }}
@@ -45,7 +45,7 @@
                     </h3>
                     <input type="text" class="form-control @error('location') is-invalid @enderror" name="location"
                         value="{{ old('location', $hospital->location) }}" id="lokasi" aria-describedby="emailHelp"
-                        placeholder="Masukkan lokasi rumah sakit" required>
+                        placeholder="Masukkan lokasi rumah sakit" required autocomplete="off">
                     @error('location')
                         <div class="invalid-feedback fs-5">
                             {{ $message }}
@@ -57,7 +57,7 @@
                         <label class="form-label" for="schedule">Jadwal Rumah Sakit</label>
                     </h3>
                     <input id="schedule" type="hidden" name="schedule" value="{{ old('schedule', $hospital->schedule) }}"
-                        required>
+                        required autocomplete="off">
                     <trix-editor input="schedule" placeholder="Senin - Sabtu 09:00 - 20:00"></trix-editor>
                     @error('schedule')
                         <p class="text-danger mt-2 fs-5">
@@ -72,7 +72,7 @@
                     <input type="number" max="5" min="1" name="rating"
                         value="{{ old('rating', $hospital->rating) }}" id="rating"
                         class="form-control @error('rating') is-invalid @enderror" aria-describedby="emailHelp"
-                        placeholder="Masukkan rating rumah sakit (1 - 5)" required>
+                        placeholder="Masukkan rating rumah sakit (1 - 5)" required autocomplete="off">
                     @error('rating')
                         <div class="invalid-feedback fs-5">
                             {{ $message }}
@@ -83,7 +83,8 @@
                     <h3>
                         <label class="form-label" for="link">Link Map Rumah Sakit</label>
                     </h3>
-                    <input id="link" type="hidden" name="link" value="{{ old('link', $hospital->link) }}" required>
+                    <input id="link" type="hidden" name="link" value="{{ old('link', $hospital->link) }}" required
+                        autocomplete="off">
                     <trix-editor input="link" placeholder="Masukkan link rumah sakit"></trix-editor>
                     @error('link')
                         <p class="text-danger mt-2 fs-5">
@@ -97,8 +98,8 @@
                     </h3>
                     <p class="text-muted">Max : 5Mb</p>
                     @if ($hospital->image)
-                        <img src="{{ asset('img/' . $hospital->image) }}" class="img-preview img-fluid mb-3 col-sm-1" style="width: 200px"
-                            alt="">
+                        <img src="{{ asset('img/' . $hospital->image) }}" class="img-preview img-fluid mb-3 col-sm-1"
+                            style="width: 200px" alt="">
                     @else
                         <img class="img-preview img-fluid mb-3 col-sm-1" style="width: 200px" alt="">
                     @endif

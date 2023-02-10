@@ -30,7 +30,8 @@
                         <label for="name" class="form-label">Nama Obat</label>
                     </h3>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" name="name"
-                        id="name" placeholder="Masukkan nama obat" value="{{ old('name') }}" required>
+                        id="name" placeholder="Masukkan nama obat" value="{{ old('name') }}" required
+                        autocomplete="off">
                     @error('name')
                         <div class="invalid-feedback fs-5">
                             {{ $message }}
@@ -58,7 +59,7 @@
                     </h3>
                     <input type="number" min="1" id="stock" name="stock"
                         class="form-control @error('stock') is-invalid @enderror" placeholder="Masukkan Jumlah Obat"
-                        value="{{ old('stock') }}" required>
+                        value="{{ old('stock') }}" required autocomplete="off">
                     @error('stock')
                         <div class="invalid-feedback fs-5">
                             {{ $message }}
@@ -69,7 +70,8 @@
                     <h3>
                         <label class="form-label" for="dose">Dosis</label>
                     </h3>
-                    <input id="dose" type="hidden" value="{{ old('dose') }}" name="dose" required>
+                    <input id="dose" type="hidden" value="{{ old('dose') }}" name="dose" required
+                        autocomplete="off">
                     <trix-editor input="dose" placeholder="Masukkan dosis obat"></trix-editor>
                     @error('dose')
                         <p class="text-danger mt-2 fs-5">
@@ -81,7 +83,8 @@
                     <h3>
                         <label class="form-label" for="composition">Komposisi Obat</label>
                     </h3>
-                    <input id="composition" type="hidden" value="{{ old('composition') }}" name="composition" required>
+                    <input id="composition" type="hidden" value="{{ old('composition') }}" name="composition" required
+                        autocomplete="off">
                     <trix-editor input="composition" placeholder="Masukkan komposisi obat"></trix-editor>
                     @error('composition')
                         <p class="text-danger mt-2 fs-5">
@@ -93,7 +96,8 @@
                     <h3>
                         <label class="form-label" for="body">Deskripsi Obat</label>
                     </h3>
-                    <input id="body" type="hidden" name="body" value="{{ old('body') }}" required>
+                    <input id="body" type="hidden" name="body" value="{{ old('body') }}" required
+                        autocomplete="off">
                     <trix-editor input="body" placeholder="Masukkan deskripsi obat"></trix-editor>
                     @error('body')
                         <p class="text-danger mt-2 fs-5">
@@ -105,7 +109,8 @@
                     <h3>
                         <label class="form-label" for="side_effect">Efek Samping Obat</label>
                     </h3>
-                    <input id="side_effect" type="hidden" value="{{ old('side_effect') }}" name="side_effect" required>
+                    <input id="side_effect" type="hidden" value="{{ old('side_effect') }}" name="side_effect" required
+                        autocomplete="off">
                     <trix-editor input="side_effect" placeholder="Masukkan efek samping obat"></trix-editor>
                     @error('side_effect')
                         <p class="text-danger mt-2 fs-5">

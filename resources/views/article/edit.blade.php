@@ -32,7 +32,7 @@
                     </h3>
                     <input type="text" class="form-control @error('title') is-invalid @enderror"
                         value="{{ old('title', $article->title) }}" name="title" id="title"
-                        aria-describedby="emailHelp" placeholder="Masukkan Judul Artikel" required>
+                        aria-describedby="emailHelp" placeholder="Masukkan Judul Artikel" required autocomplete="off">
                     @error('title')
                         <div class="invalid-feedback fs-5">
                             {{ $message }}
@@ -59,7 +59,7 @@
                     </h3>
                     <input type="text" name="highlight" value="{{ old('highlight', $article->highlight) }}"
                         id="highlight" class="form-control @error('highlight') is-invalid @enderror""
-                        aria-describedby="emailHelp" placeholder="Masukkan teks" required>
+                        aria-describedby="emailHelp" placeholder="Masukkan teks" required autocomplete="off">
                     @error('highlight')
                         <div class="invalid-feedback fs-5">
                             {{ $message }}
@@ -89,7 +89,8 @@
                     <h3>
                         <label class="form-label" for="deskripsi">Isi Artikel</label>
                     </h3>
-                    <input id="deskripsi" name="body" value="{{ old('body', $article->body) }}" type="hidden" required>
+                    <input id="deskripsi" name="body" value="{{ old('body', $article->body) }}" type="hidden" required
+                        autocomplete="off">
                     <trix-editor input="deskripsi" placeholder="Masukkan teks"></trix-editor>
                     @error('body')
                         <p class="text-danger mt-2 fs-5">

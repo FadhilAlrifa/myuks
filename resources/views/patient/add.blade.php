@@ -30,8 +30,8 @@
                         <label for="name" class="form-label">Nama Pasien</label>
                     </h3>
                     <input type="text" class="form-control @error('name') is-invalid @enderror"
-                        value="{{ old('name') }}" name="name" id="name" aria-describedby="emailHelp"
-                        placeholder="Masukkan Nama Pasien" required>
+                        value="{{ old('name') }}" name="name" id="name" placeholder="Masukkan Nama Pasien"
+                        required autocomplete="off">
                     @error('name')
                         <div class="invalid-feedback fs-5">
                             {{ $message }}
@@ -44,7 +44,7 @@
                     </h3>
                     <input type="text" class="form-control @error('class') is-invalid @enderror"
                         value="{{ old('class') }}" name="class" id="class" aria-describedby="emailHelp"
-                        placeholder="Masukkan Kelas Pasien" required>
+                        placeholder="Masukkan Kelas Pasien" required autocomplete="off">
                     @error('class')
                         <div class="invalid-feedback fs-5">
                             {{ $message }}
@@ -71,7 +71,7 @@
                     </h3>
                     <input type="text" class="form-control @error('keluhan') is-invalid @enderror"
                         value="{{ old('keluhan') }}" name="keluhan" id="keluhan" aria-describedby="emailHelp"
-                        placeholder="Masukkan Keluhan" required>
+                        placeholder="Masukkan Keluhan" required autocomplete="off">
                     @error('keluhan')
                         <div class="invalid-feedback fs-5">
                             {{ $message }}

@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
             "Mental dan psikis",
             "Makanan",
             "Olahraga",
+            "Gaya Hidup",
             "Lainnya"
         ];
 
@@ -54,7 +55,9 @@ class DatabaseSeeder extends Seeder
             "Sakit Kepala",
             "Gangguan Pencernaan",
             "Nyeri",
-            "Lainnya"
+            "Gangguan Kulit",
+            "Gangguan Pernapasan",
+            "Lainnya",
         ];
 
         for ($i = 0; $i < count($medicineCategory); $i++) {

@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row partial-navbar">
     <div class="col-lg-2"></div>
 
     <div class="col-lg-8 align-self-center">
