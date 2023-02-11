@@ -10,9 +10,12 @@
 
 @section('container')
     <div class="row search-bar justify-content-center">
+        <div class="col-12 mt-5 text-center d-lg-none d-block">
+            <h1>Daftar Obat</h1>
+        </div>
         <div class="col-lg-10">
             <form action="" method="get">
-                <div class="search-form d-none d-xl-block">
+                <div class="search-form d-xl-block">
                     <div class="mt-5">
                         <div class="input-group">
                             <span class="input-group-text search-span" id="basic-addon1">
@@ -80,10 +83,34 @@
                     </div>
                 @endforeach
             </div>
-            <div class="row justify-content-center daftar-obat">
+            <div class="row justify-content-center daftar-obat daftar-obat-desktop">
                 @if ($medicines->count())
                     @foreach ($medicines as $medicine)
                         <div class="col-lg-3 mb-5">
+                            <a href="/medicines/{{ $medicine->slug }}">
+                                <div class="card border-obat">
+                                    <div class="text-center">
+                                        <img src="{{ asset('img/' . $medicine->image) }}" class="card-img-top rounded"
+                                            alt="...">
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h4 class="card-title text-dark">{{ $medicine->name }}</h4>
+                                        <p class="card-text mt-4">Stok : {{ $medicine->stock }}</p>
+                                        <p>Kategori : {{ $medicine->category->name }}</p>
+                                        <p class="text-muted">View : {{ $medicine->view }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @else
+                    <p class="text-center fs-3 card border-0 w-25 py-3 m-auto text-muted disabled">Obat masih kosong</p>
+                @endif
+            </div>
+            <div class="daftar-obat daftar-obat-mobile">
+                @if ($medicines->count())
+                    @foreach ($medicines as $medicine)
+                        <div class="obat-mobile mb-5">
                             <a href="/medicines/{{ $medicine->slug }}">
                                 <div class="card border-obat">
                                     <div class="text-center">
@@ -116,9 +143,28 @@
                         </div>
                     </div>
                     @if ($medicines->where('category_id', $medicine_category->id)->count())
-                        <div class="row justify-content-center daftar-obat">
+                        <div class="row justify-content-center daftar-obat daftar-obat-desktop">
                             @foreach ($medicines->where('category_id', $medicine_category->id) as $medicine)
                                 <div class="col-lg-3 mb-5">
+                                    <a href="/medicines/{{ $medicine->slug }}">
+                                        <div class="card border-obat">
+                                            <div class="text-center">
+                                                <img src="{{ asset('img/' . $medicine->image) }}"
+                                                    class="card-img-top rounded" alt="...">
+                                            </div>
+                                            <div class="card-body text-center">
+                                                <h4 class="card-title text-dark">{{ $medicine->name }}</h4>
+                                                <p class="card-text mt-4">Stok : {{ $medicine->stock }}</p>
+                                                <p>Kategori : {{ $medicine->category->name }}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="daftar-obat daftar-obat-mobile">
+                            @foreach ($medicines->where('category_id', $medicine_category->id) as $medicine)
+                                <div class="obat-mobile mb-5">
                                     <a href="/medicines/{{ $medicine->slug }}">
                                         <div class="card border-obat">
                                             <div class="text-center">

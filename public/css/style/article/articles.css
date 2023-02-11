@@ -70,6 +70,10 @@ nav a {
     font-size: x-large;
 }
 
+.navbar-nav>li.nav-mobile {
+    display: none;
+}
+
 .nav-color {
     background-color: #80ed99;
 }
@@ -152,7 +156,7 @@ a {
 }
 
 .search-bar {
-    margin-top: 180px;
+    /* margin-top: 180px; */
     /* border-radius: 15%; */
 }
 
@@ -299,6 +303,11 @@ div.modal-dialog {
     font-weight: 500;
 }
 
+div.daftar-article-mobile,
+div.article-content {
+    display: none;
+}
+
 .daftar-article .border-article:hover,
 .daftar-article-slide .border-article:hover {
     background: #69b17a;
@@ -340,6 +349,7 @@ div.daftar-article-slide ul li {
 div.daftar-article {
     margin: auto;
     width: 85%;
+    /* display: none; */
     /* font-size: 25px; */
 }
 
@@ -381,6 +391,14 @@ div.foot-back strong {
     font-weight: 500;
 }
 
+div.foot-back .row div {
+    width: 289px;
+}
+
+.footer-layanan {
+    margin-right: 190px;
+}
+
 div.foot-back a h3 {
     font-weight: 300;
 }
@@ -403,8 +421,96 @@ a.border-card-active,
     background-color: #a6d6b1;
 }
 
-@media only screen and (max-width: 1227px) {
-    .mobile {
+@media only screen and (max-width: 992px) {
+
+    div.logout-button {
+        display: none;
+    }
+
+    .navbar-nav>li.nav-mobile {
+        display: block;
+        padding-bottom: 10px;
+        /* padding: 0; */
+    }
+
+    nav.navbar .navbar-nav {
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    nav.navbar li.nav-item {
+        width: 100%;
+        padding: 0;
+    }
+
+    :root {
+        /* zoom: .; */
+        overflow-x: hidden;
+        /* position: relative; */
+        height: 100%;
+    }
+
+    div.partial-navbar {
+        display: none;
+    }
+
+    body>div.container-fluid .w85 {
+        margin: auto;
+        width: 85%;
+    }
+
+    div.search-bar {
+        margin-top: 0;
+        margin-left: 5px;
+    }
+
+    div.button-add-article {
+        width: 95%;
+    }
+
+
+
+
+
+    .modal-body {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+
+    daftar-article div.daftar-article {
+        width: 100%;
+    }
+
+    div.daftar-article-desktop {
+        display: none;
+    }
+
+    div.daftar-article-mobile {
+        display: flex;
+        gap: 12px;
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+        scroll-padding: 30px;
+    }
+
+    div.content-mobile {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
+
+
+
+
+    .footer-layanan {
+        margin-right: 0;
+    }
+
+
+
+
+
+    /* .mobile {
         margin: 0px 3em;
         text-align: center;
         display: flex;
@@ -416,5 +522,5 @@ a.border-card-active,
     .mobile~*,
     .navbar.navbar-expand-lg {
         display: none;
-    }
+    } */
 }

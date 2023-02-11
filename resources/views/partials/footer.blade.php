@@ -1,7 +1,7 @@
 <div class="footer foot-back row">
     <div class="col-lg-4">
         <div class="text-center mt-5 size-3"
-            style="color: #57CC99; 
+            style="color: #57CC99;
                 font-family: 'Prompt';
                 font-style: normal;
                 font-weight: 700;
@@ -10,8 +10,8 @@
             myUKS
         </div>
     </div>
-    <div class="col-lg-8 justify-content-center row">
-        <div class="col-lg-4" style="margin-right: 190px">
+    <div class="col-lg-8 col-12 justify-content-center row">
+        <div class="col-lg-4 footer-layanan">
             <div class="mt-5 pt-5">
                 <div class="mb-4" style="font-size: 35px;">
                     <strong>

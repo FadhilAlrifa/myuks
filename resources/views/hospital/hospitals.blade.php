@@ -16,9 +16,12 @@
     @endif
 
     <div class="row search-bar justify-content-center">
+        <div class="col-12 mt-5 text-center d-lg-none d-block">
+            <h1>Daftar Rumah Sakit</h1>
+        </div>
         <div class="col-lg-9">
             <form action="" method="get">
-                <div class="search-form d-none d-xl-block">
+                <div class="search-form d-xl-block">
                     <div class="mt-5">
                         <div class="input-group">
                             <span class="input-group-text search-span" id="basic-addon1">
@@ -33,7 +36,7 @@
         </div>
     </div>
     <div class="row mt-5 justify-content-center">
-        <div class="col-lg-10 d-none d-xl-block button-add-hospital">
+        <div class="col-lg-10 d-none d-lg-block button-add-hospital">
             @auth
                 <a class="btn btn-primary btn-add-hospital" href="/hospitals/admin/add" role="button">Tambah Rumah Sakit</a>
             @endauth

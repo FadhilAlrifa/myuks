@@ -109,11 +109,14 @@ class StudentController extends Controller
         }
 
         if ($request->file('image')) {
-            if ($student->image) {
+            if ($student->image && $student->image != 'patients/sample.jpg') {
                 Storage::delete($student->image);
             }
             $validatedData['image'] = $request->file('image')->store('patients');
         } else {
+            if ($student->image && $student->image != 'patients/sample.jpg') {
+                Storage::delete($student->image);
+            }
             $validatedData["image"] = 'patients/sample.jpg';
         }
 

@@ -23,10 +23,13 @@
     @endif
 
     <div class="container-fluid">
+        <div class="col-12 mt-5 text-center d-lg-none d-block">
+            <h1>Artikel Kesehatan</h1>
+        </div>
         <div class="row search-bar justify-content-center">
             <div class="col-lg-10">
                 <form action="" method="get">
-                    <div class="search-form d-none d-xl-block">
+                    <div class="search-form d-xl-block">
                         <div class="mt-5">
                             <div class="input-group">
                                 <span class="input-group-text search-span" id="basic-addon1">
@@ -89,7 +92,7 @@
         <!-- Body -->
         <br>
         @if (request('search') || request('category'))
-            <div class="row mt-5">
+            <div class="row mt-3 mt-lg-5">
                 @foreach ($articles_category->where('slug', request('category')) as $article_category)
                     <div class="row justify-content-center mb-2">
                         <div class="col-lg-10">
@@ -172,9 +175,27 @@
                                 </div>
                             </div>
                             @if ($articles->where('category_id', $article_category->id)->count())
-                                <div class="row justify-content-center daftar-article">
+                                <div class="row justify-content-center daftar-article daftar-article-desktop">
                                     @foreach ($articles->where('category_id', $article_category->id) as $article)
                                         <div class="col-lg-3">
+                                            <a href="/articles/{{ $article->slug }}">
+                                                <div class="card border-article">
+                                                    <div class="text-center px-3 pt-3">
+                                                        <img src="{{ asset('img/' . $article->image) }}"
+                                                            class="card-img-top" alt="...">
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">{{ $article->title }}
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <div class="daftar-article daftar-article-mobile">
+                                    @foreach ($articles->where('category_id', $article_category->id) as $article)
+                                        <div class="content-mobile">
                                             <a href="/articles/{{ $article->slug }}">
                                                 <div class="card border-article">
                                                     <div class="text-center px-3 pt-3">

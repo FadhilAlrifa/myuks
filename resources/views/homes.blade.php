@@ -86,12 +86,12 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-2 text-center">
-                                            <p>*Masuk</p>
+                                            <p class="fs-5">Masuk</p>
                                             <h4>{{ date('H:i', strtotime($student->timestamp)) }}</h4>
                                         </div>
                                         @if ($student->status == 1)
                                             <div class="col-lg-2 text-center">
-                                                <p>*Keluar</p>
+                                                <p class="fs-5">Keluar</p>
                                                 <h4>{{ date('H:i', strtotime($student->updated_at)) }}</h4>
                                             </div>
                                         @endif
@@ -125,9 +125,9 @@
                 @if (date('Y-m-d', strtotime($student->timestamp)) == now()->format('Y-m-d'))
                     <div class="patient-item p-0 my-5 me-4">
                         <a href="/patients/{{ $student->slug }}/edit">
-                            <div class="card border-0 ">
+                            <div class="card border-0">
                                 <div class="row g-0 px-3 py-3 justify-content-between">
-                                    <div class="col-2 d-flex justify-content-center align-self-center bg-danger">
+                                    <div class="col-2 d-flex justify-content-center align-self-center">
                                         <img src="{{ asset('img/' . $student->image) }}" class="img-fluid rounded"
                                             alt="foto siswa">
                                     </div>
@@ -140,9 +140,14 @@
                                         </div>
                                         <hr class="my-2 p-0">
                                         <div class="row justify-content-between">
-                                            <p class="text-muted ms-3 p-0">{{ $student->keluhan }}</p>
-                                            <div class="">
-
+                                            <p class="col-6 text-muted ms-3 p-0">{{ $student->keluhan }}</p>
+                                            <div class="col-5 text-end">
+                                                @if ($student->status == 0)
+                                                    {{ date('H:i', strtotime($student->created_at)) }}
+                                                @elseif ($student->status == 1)
+                                                    {{ date('H:i', strtotime($student->created_at)) }} -
+                                                    {{ date('H:i', strtotime($student->updated_at)) }}
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
