@@ -22,14 +22,15 @@
         <div class="col-lg-10">
             <article>
                 <h1>{{ $article->title }}</h1>
-                <p class="text-muted">Kategori : {{ $article->category->name }}</p>
+                <p class="text-muted text-responsive">Kategori : {{ $article->category->name }}</p>
                 {{-- <p class="text-muted">slug : {{ $article->slug }}</p> --}}
 
-                <p>“{{ $article->highlight }}”</p>
+                <p class="">“{{ $article->highlight }}”</p>
 
                 <img src="{{ asset('img/' . $article->image) }}" style="max-height: 600px" alt="gambar artikel">
 
-                {!! $article->body !!}
+                <p style="font-size: 10px;">{!! $article->body !!}</p>
+
             </article>
         </div>
     </div>

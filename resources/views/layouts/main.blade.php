@@ -27,7 +27,8 @@
 <body class="body">
 
     <div class="mobile">
-        <h3>Mohon maaf, saat ini tampilan hanya tersedia untuk desktop yang lebih lebar</h3>
+        {{-- <h3>Mohon maaf, saat ini tampilan hanya tersedia untuk desktop yang lebih lebar</h3> --}}
+        <h3>Fitur Admin Hanya Tersedia Untuk Desktop</h3>
     </div>
 
     @include('partials.navbar')

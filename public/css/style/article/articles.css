@@ -421,6 +421,7 @@ a.border-card-active,
     background-color: #a6d6b1;
 }
 
+
 @media only screen and (max-width: 992px) {
 
     div.logout-button {
@@ -441,6 +442,14 @@ a.border-card-active,
     nav.navbar li.nav-item {
         width: 100%;
         padding: 0;
+    }
+
+    nav.navbar ul.navbar-nav li {
+        font-size: calc(50% + 1vw + 1vh);
+    }
+
+    nav.navbar ul.navbar-nav li a.btn.btn-primary {
+        font-size: calc(15% + 1vw + 1vh);
     }
 
     :root {
@@ -471,7 +480,6 @@ a.border-card-active,
 
 
 
-
     .modal-body {
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
@@ -495,7 +503,7 @@ a.border-card-active,
     }
 
     div.content-mobile {
-        flex: 0 0 100%;
+        flex: 0 0 45%;
         scroll-snap-align: start;
     }
 
@@ -506,7 +514,9 @@ a.border-card-active,
         margin-right: 0;
     }
 
-
+    div.foot-back .row strong {
+        font-size: 35px;
+    }
 
 
 
@@ -523,4 +533,34 @@ a.border-card-active,
     .navbar.navbar-expand-lg {
         display: none;
     } */
+}
+
+@media only screen and (max-width: 699px) {
+    nav.navbar ul.navbar-nav li {
+        font-size: calc(65% + 1vw + 1vh);
+    }
+
+    nav.navbar ul.navbar-nav li a.btn.btn-primary {
+        font-size: calc(25% + 1vw + 1vh);
+    }
+}
+
+@media only screen and (max-width: 580px) {
+
+    nav.navbar ul.navbar-nav li {
+        font-size: calc(70% + 1vw + 1vh);
+    }
+
+    nav.navbar ul.navbar-nav li a.btn.btn-primary {
+        font-size: calc(32% + 1vw + 1vh);
+    }
+
+    div.foot-back .row strong {
+        font-size: 35px;
+    }
+
+    div.content-mobile {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
 }

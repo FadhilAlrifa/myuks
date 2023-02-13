@@ -12,8 +12,10 @@
 </head>
 
 <body>
-    <div class="container-fluid mobile"></div>
-    
+    <div class="mobile">
+        {{-- <h3>Mohon maaf, saat ini tampilan hanya tersedia untuk desktop yang lebih lebar</h3> --}}
+        <h3>Fitur Admin Hanya Tersedia Untuk Desktop</h3>
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-4 d-none d-xl-block p-0">

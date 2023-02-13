@@ -53,6 +53,10 @@ body {
     font-size: x-large;
 }
 
+.navbar-nav>li.nav-mobile {
+    display: none;
+}
+
 .nav-color {
     background-color: #80ed99;
 }
@@ -259,5 +263,9 @@ div.foot-back a h3 {
     .mobile~*,
     .navbar.navbar-expand-lg {
         display: none;
+    }
+
+    div.foot-back .row strong {
+        font-size: 35px;
     }
 }

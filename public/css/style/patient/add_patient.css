@@ -53,6 +53,10 @@ body {
     font-size: x-large;
 }
 
+.navbar-nav>li.nav-mobile {
+    display: none;
+}
+
 .nav-color {
     background-color: #80ed99;
 }

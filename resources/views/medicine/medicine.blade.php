@@ -5,12 +5,12 @@
 @endsection
 
 @section('container')
-    <div class="row header-obat justify-content-center my-5">
-        <div class="col-lg-1">
+    <div class="row header-obat justify-content-center my-5 ms-md-0">
+        <div class="col-lg-1 img-obat">
             {{-- <img src="/img/medicines/mixagrif.png" style="max-width: 200px; margin-left: -40px" alt=""> --}}
             <img src="{{ asset('img/' . $medicine->image) }}" style="max-width: 200px; margin-left: -40px" alt="gambar obat">
         </div>
-        <div class="col-lg-8 d-flex flex-column justify-content-between ms-5">
+        <div class="col-lg-8 d-flex flex-column justify-content-between ms-md-0 ms-5">
             <h2>{{ $medicine->name }}</h2>
             <div class="category-obat">
                 <h4>Kategori :</h4>
@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    <div class="row justify-content-center my-5">
+    <div class="row justify-content-center my-5 ms-md-0 ms-2">
         <div class="col-lg-10">
             <article>
                 <h2>Keterangan :</h2>

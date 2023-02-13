@@ -349,6 +349,14 @@ a.border-card-active,
 
 @media only screen and (max-width: 992px) {
 
+    nav.navbar ul.navbar-nav li {
+        font-size: calc(50% + 1vw + 1vh);
+    }
+
+    nav.navbar ul.navbar-nav li a.btn.btn-primary {
+        font-size: calc(15% + 1vw + 1vh);
+    }
+
     .spacer-desktop,
     div.logout-button {
         display: none;
@@ -387,6 +395,10 @@ a.border-card-active,
     .navbar.navbar-expand-lg {
         display: none;
     } */
+
+    * {
+        font-size: calc(25% + 1vw + 1vh);
+    }
 
     :root {
         /* zoom: .; */
@@ -548,5 +560,42 @@ a.border-card-active,
 
     .footer-layanan {
         margin-right: 0;
+    }
+
+    div.foot-back .row strong {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 699px) {
+    nav.navbar ul.navbar-nav li {
+        font-size: calc(65% + 1vw + 1vh);
+    }
+
+    nav.navbar ul.navbar-nav li a.btn.btn-primary {
+        font-size: calc(25% + 1vw + 1vh);
+    }
+
+    * {
+        font-size: calc(30% + 1vw + 1vh);
+    }
+}
+
+@media only screen and (max-width: 580px) {
+
+    nav.navbar ul.navbar-nav li {
+        font-size: calc(80% + 1vw + 1vh);
+    }
+
+    nav.navbar ul.navbar-nav li a.btn.btn-primary {
+        font-size: calc(35% + 1vw + 1vh);
+    }
+
+    * {
+        font-size: calc(33% + 1vw + 1vh);
+    }
+
+    div.foot-back .row strong {
+        font-size: 35px;
     }
 }

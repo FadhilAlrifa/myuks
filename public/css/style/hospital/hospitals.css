@@ -234,7 +234,7 @@ div.foot-back a h3 {
 
 .rms a:hover {}
 
-.rms a:hover .card-rms {
+.rms a:hover .card-rms:hover {
     background: #6ab07a;
 }
 
@@ -243,6 +243,10 @@ div.foot-back a h3 {
     box-shadow: 11px 8px 15px -1px rgba(0, 0, 0, 0.25);
     border-radius: 24.1404px;
     transition: .25s;
+}
+
+div.card-rms .star-rating {
+    width: 30px;
 }
 
 a.btn-edit-hospital {
@@ -277,7 +281,21 @@ a.border-card-active,
     background-color: #a6d6b1;
 }
 
+div.hospital-mobile {
+    display: none;
+}
+
 @media only screen and (max-width: 992px) {
+
+    * {
+        font-size: calc(12% + 1vw + 1vh);
+    }
+
+
+    div.card-rms .star-rating {
+        width: 26px;
+    }
+
 
     div.logout-button {
         display: none;
@@ -297,6 +315,14 @@ a.border-card-active,
     nav.navbar li.nav-item {
         width: 100%;
         padding: 0;
+    }
+
+    nav.navbar ul.navbar-nav li {
+        font-size: calc(50% + 1vw + 1vh);
+    }
+
+    nav.navbar ul.navbar-nav li a.btn.btn-primary {
+        font-size: calc(15% + 1vw + 1vh);
     }
 
     :root {
@@ -328,22 +354,40 @@ a.border-card-active,
         border-top-right-radius: 20px;
     }
 
-    div.daftar-obat-desktop {
+
+
+
+
+    div.card-rms {
+        width: 45em;
+        /* width: 100%; */
+        margin-right: 20px;
+    }
+
+
+
+
+    div.hospital-desktop {
         display: none;
     }
 
-    div.daftar-obat-mobile {
+    div.hospital-mobile {
+        display: block;
+    }
+
+    div.hospital-list-container-mobile {
         display: flex;
         gap: 12px;
         scroll-snap-type: x mandatory;
         overflow-x: scroll;
-        scroll-padding: 30px;
+        scroll-padding: 50px;
     }
 
-    div.obat-mobile {
+    div.hospital-item-mobile {
         flex: 0 0 80%;
         scroll-snap-align: start;
     }
+
 
 
 
@@ -353,7 +397,9 @@ a.border-card-active,
         margin-right: 0;
     }
 
-
+    div.foot-back .row strong {
+        font-size: 35px;
+    }
 
 
 
@@ -370,4 +416,45 @@ a.border-card-active,
     .navbar.navbar-expand-lg {
         display: none;
     } */
+}
+
+/* Khusus Navbar Tablet */
+@media only screen and (max-width: 699px) {
+    nav.navbar ul.navbar-nav li {
+        font-size: calc(65% + 1vw + 1vh);
+    }
+
+    nav.navbar ul.navbar-nav li a.btn.btn-primary {
+        font-size: calc(25% + 1vw + 1vh);
+    }
+}
+
+@media only screen and (max-width: 598px) {
+
+    nav.navbar ul.navbar-nav li {
+        font-size: calc(85% + 1vw + 1vh);
+    }
+
+    nav.navbar ul.navbar-nav li a.btn.btn-primary {
+        font-size: calc(32% + 1vw + 1vh);
+    }
+
+    * {
+        font-size: calc(28% + 1vw + 1vh);
+    }
+
+    div.foot-back .row a h3 {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 653px) {
+    div.card-rms {
+        width: 90%;
+    }
+
+    div.rms a {
+        right: 15%;
+    }
+
 }
